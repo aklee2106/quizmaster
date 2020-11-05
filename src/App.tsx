@@ -7,6 +7,10 @@ import QuestionCard from './components/QuestionCard';
 //types
 import {QuestionState, Difficulty} from './API';
 
+//styles
+import {GlobalStyle, Wrapper} from './App.styles';
+
+
 export type AnswerObject = {
   question: string;
   answer: string;
@@ -83,7 +87,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <>
+    <GlobalStyle/>
+    <Wrapper>
       <h1>Trivia Master</h1>
 
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
@@ -109,7 +115,8 @@ function App() {
       ) : null}
       
 
-    </div>
+    </Wrapper>
+    </>
   );
 }
 
