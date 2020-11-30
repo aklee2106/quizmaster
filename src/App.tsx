@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {fetchQuizQuestions} from './API';
+import lodash from 'react';
 
 //components 
 import QuestionCard from './components/QuestionCard';
